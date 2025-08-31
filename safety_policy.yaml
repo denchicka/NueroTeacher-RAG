@@ -1,0 +1,15 @@
+meta:
+  version: 1.0.0
+thresholds:
+  moderation:
+    model: omni-moderation-latest
+danger:
+  real_world_markers:
+    - "\\bв\\s+реал\\w+\\b"
+    - "\\birl\\b"
+replace:
+  terms:
+    - from: "\\b(gun|пистолет|оружие)\\b"
+      to: "бластер (игровой инструмент)"
+responses:
+  blocked_input: "⛔ Запрос заблокирован политикой безопасности."
